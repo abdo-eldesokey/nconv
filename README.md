@@ -1,9 +1,9 @@
 # NConv-CNN
 This is the PyTorch implementation for our work:
 
-[Propagating Confidences through CNNs for Sparse Data Regression](https://arxiv.org/abs/1805.11913)
+1. [Propagating Confidences through CNNs for Sparse Data Regression](https://arxiv.org/abs/1805.11913)
 
-[Confidence Propagation through CNNs for Guided Sparse Depth Regression ](https://arxiv.org/abs/1811.01791)
+2. [Confidence Propagation through CNNs for Guided Sparse Depth Regression ](https://arxiv.org/abs/1811.01791)
 
 
 If you use this code or compare against it, please cite our work:
@@ -38,6 +38,15 @@ python run-nconv-cnn.py -mode [MODE] -exp [EXP] -chkpt [CHKPT] -set [SET]
 `[CHKPT]:` Continue traing from a specific epoch _or_ evaluate using a specific epoch.
 
 `[SET]:` The set to evaluate on. The possible options are `val`, `selval` or `test`.
+
+## Networks Description
+Networks are located in "workspace" directory. Each network file is stored in its own directory and associated with `params.json` which has the training parameters for the network.
+
+Four netwokrs are available:
+1. `exp_unguided_disparity:` Unguided depth completion network trained on disparity *(Deonted as NConv-HMS in paper [1])*
+2. `exp_unguided_depth:` Unguided depth completion network trained on depth *(Needed for networks 3 and 4)*
+3. `exp_guided_nconv_cnn_l1:` Guided depth completion network trained on depth *(Denoted as MS-Net[LF] in paper [2])*
+4. `exp_guided_enc_dec:` Guided depth completion network trained on depth *(Denoted as Enc-Dec[EF] in paper [2])*
 
 ## Contact
 Abdelrahman Eldesokey
