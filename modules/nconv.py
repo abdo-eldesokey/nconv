@@ -35,10 +35,14 @@ class NConv2d(_ConvNd):
         
     def forward(self, data, conf):
         
+        w = F.softplus(self.weight)
+        
+        print(w)
+        
         # Normalized Convolution
-        denom = F.conv2d(conf, self.weight, None, self.stride,
+        denom = F.conv2d(conf, w, None, self.stride,
                         self.padding, self.dilation, self.groups)        
-        nomin = F.conv2d(data*conf, self.weight, None, self.stride,
+        nomin = F.conv2d(data*conf, w, None, self.stride,
                         self.padding, self.dilation, self.groups)        
         nconv = nomin / (denom+self.eps)
         
@@ -55,7 +59,7 @@ class NConv2d(_ConvNd):
         sz = cout.size()
         cout = cout.view(sz[0], sz[1], -1)
         
-        k = self.weight
+        k = w
         k_sz = k.size()
         k = k.view(k_sz[0], -1)
         s = torch.sum(k, dim=-1, keepdim=True)        
