@@ -44,9 +44,16 @@ Networks are located in "workspace" directory. Each network file is stored in it
 
 Four netwokrs are available:
 1. `exp_unguided_disparity:` Unguided depth completion network trained on disparity *(Deonted as NConv-HMS in paper [1])*
-2. `exp_unguided_depth:` Unguided depth completion network trained on depth *(Needed for networks 3 and 4)*
-3. `exp_guided_nconv_cnn_l1:` Guided depth completion network trained on depth *(Denoted as MS-Net[LF] in paper [2])*
-4. `exp_guided_enc_dec:` Guided depth completion network trained on depth *(Denoted as Enc-Dec[EF] in paper [2])*
+2. `exp_unguided_depth:` Unguided depth completion network trained on depth.
+3. `exp_guided_nconv_cnn_l1:` Guided depth completion network trained on depth *(Denoted as MS-Net[LF] or NConv-CNN-L1 in paper [2])*
+4. `exp_guided_nconv_cnn_l2:` Guided depth completion network trained on depth *(Denoted as NConv-CNN-L2 in paper [2])*
+5. `exp_guided_enc_dec:` Guided depth completion network trained on depth *(Denoted as Enc-Dec[EF] in paper [2])*
+
+## Evaluation using Pretrained Weights 
+You can evaluate any of the networks using the pretrained-weights by calling 
+```
+python run-nconv-cnn.py -mode eval -exp <exp_name>
+```
 
 ## Contact
 Abdelrahman Eldesokey
