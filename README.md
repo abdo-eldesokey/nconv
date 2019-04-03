@@ -23,6 +23,13 @@ If you use this code or compare against it, please cite our work:
   year={2018}
 }
 ```
+## Contents
+0. [Dependencies](#dependencies)
+0. [Networks Description](#networks-description)
+0. [Evaluation using Pretrained Weights](#evaluation-using-pretrained-weights)
+0. [The NYU-Depth-v2 dataset](#the-nyu-depth-v2-dataset)
+0. [Contact](#contact)
+
 ## Dependecies
 * opencv (To save output images)
 * json (To read experiment parameters file)
@@ -54,6 +61,10 @@ You can evaluate any of the networks using the pretrained-weights by calling
 ```
 python run-nconv-cnn.py -mode eval -exp <exp_name>
 ```
+
+## The NYU-Depth-v2 dataset
+The implemntation for the NYU-Depth-v2 dataset can be found at:
+https://github.com/abdo-eldesokey/nconv-nyu
 
 ## Contact
 Abdelrahman Eldesokey
