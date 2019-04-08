@@ -113,9 +113,9 @@ class KittiDepthTrainer(Trainer):
                 if s == 'train':                    
                     loss.backward()   
                     self.optimizer.step()            
-                    self.optimizer.zero_grad()
-
-                    
+                
+                self.optimizer.zero_grad()
+    
                 # statistics
                 loss_meter[s].update(loss.item(), inputs_d.size(0))
             
