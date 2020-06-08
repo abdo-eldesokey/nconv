@@ -1,4 +1,6 @@
 # NConv-CNN
+[!image](imgs/pami_figure.png)
+
 This is the PyTorch implementation for our work:
 
 1. [Propagating Confidences through CNNs for Sparse Data Regression](https://arxiv.org/abs/1805.11913)
