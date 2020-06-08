@@ -1,5 +1,4 @@
 # NConv-CNN
-[!image](imgs/pami_figure.png)
 
 This is the PyTorch implementation for our work:
 
@@ -7,6 +6,9 @@ This is the PyTorch implementation for our work:
 
 2. [Confidence Propagation through CNNs for Guided Sparse Depth Regression ](https://arxiv.org/abs/1811.01791)
 
+<p align="center">
+  <img src="imgs/teaser.png"/>
+</p>
 
 If you use this code or compare against it, please cite our work:
 ```
